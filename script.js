@@ -5,6 +5,8 @@ const portada = document.querySelector('.portada img');
 const leftBtn = document.querySelector('.portada .arrow.left');
 const rightBtn = document.querySelector('.portada .arrow.right');
 const dots = document.querySelectorAll('.portada-dots div');
+const userBtn = document.getElementById("user");
+const userMenu = document.getElementById("user-menu");
 
 const portadaImgs = [
   "img/hollow.jpg",
@@ -36,7 +38,6 @@ rightBtn.addEventListener('click', () => {
   mostrarPortada(portadaIndex);
 });
 
-// dots clickeables
 dots.forEach((dot, i) => {
   dot.addEventListener('click', () => {
     portadaIndex = i;
@@ -44,7 +45,6 @@ dots.forEach((dot, i) => {
   });
 });
 
-// iniciar portada
 mostrarPortada(0);
 
 function setActiveDot(index) {
@@ -72,4 +72,32 @@ window.addEventListener('resize', () => {
   menuham.classList.remove('open');
   overlay.classList.remove('show');
  }
+});
+const userButton = document.getElementById('user');
+const userDropdown = document.getElementById('user-dropdown');
+
+function toggleDropdown() {
+    userDropdown.classList.toggle('show');
+}
+userButton.addEventListener('click', (event) => {
+    event.stopPropagation(); 
+    toggleDropdown();
+});
+
+document.addEventListener('click', (event) => {
+    if (!userDropdown.contains(event.target) && event.target !== userButton) {
+        if (userDropdown.classList.contains('show')) {
+            userDropdown.classList.remove('show');
+        }
+    }
+});
+
+userBtn.addEventListener("click", () => {
+  userMenu.classList.toggle("open");
+});
+
+document.addEventListener("click", (e) => {
+  if (!userBtn.contains(e.target) && !userMenu.contains(e.target)) {
+    userMenu.classList.remove("open");
+  }
 });

@@ -256,7 +256,7 @@ aside.open .nav-btn span {
 
 .portada-dots {
   position: absolute;
-  bottom: 20px; /* más cerca de la portada */
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -268,13 +268,13 @@ aside.open .nav-btn span {
   width: 20px;
   height: 10px;
   border-radius: 5px;
-  background-color: var(--muted); /* color inactivo */
+  background-color: var(--muted);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .portada-dots div.active {
-  width: 40px; /* el dot activo más grande */
+  width: 40px; 
   background-color: var(--accent);
 }
 
@@ -395,4 +395,47 @@ footer {
  font-size: 10px;
  font-family: 'Poppins', sans-serif;
  color: #fff;
+}
+.user-menu {
+  position: fixed;
+  top: 60px; 
+  right: 0; 
+  width: 170px;
+  background: var(--card);
+  border-radius: 0 0 12px 12px;
+  box-shadow: -4px 4px 12px rgba(0,0,0,0.3);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 1002;
+}
+
+.user-menu.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.user-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-menu li {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.user-menu li:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateX(-5px);
+}
+.menu-line{
+  height: 2px;
+  background: var(--muted);
+  margin: 5px 0;
 }
