@@ -9,10 +9,32 @@
   --muted: #969696;
   --border: #2d2929;
   --card: #160b14;
+
+  --accent1: #FFECB3;
+  --accent2: #FFD54F;
+  --accent3: #FFC107;
+  --accent4: #FFA000;
+  --accent5: #FF8F00;
+
+  --secondary1: #2D2929;
+  --secondary2: #130E12;
+  --secondary3: #160B14;
+
+  --terciary1: #B9B9B9;
+  --terciary2: #969696;
+  --terciary3: #717070;
+  --terciary4: #DEDDDD;
+  --terciary5: #FFFEFE;
+
+  --primary1: #9E1C7E;
+  --primary2: #7E0D62;
+  --primary3: #610049;
+  --primary4: #AA3A8E;
+  --primary5: #C261AA;
 }
 
 /* =========================================
-   RESETEO Y CONFIGURACIÓN BASE
+   CONFIGURACIÓN BASE
 ========================================= */
 * { box-sizing: border-box; }
 
@@ -371,6 +393,35 @@ section h2 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* =========================================
+   GAME PAGE
+========================================= */
+.breadcrumb {
+
+}
+.main-games{
+  flex: 1;
+  margin-left: 22px;
+  padding: 40px clamp(16px, 6vw, 100px) 80px;
+}
+
+.game-screen {
+  width: 1080px;
+  height: 607px;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      
+  object-position: center;
+  display: block;         
+}
+
+
 
 /* =========================================
    PIE DE PÁGINA (FOOTER)
