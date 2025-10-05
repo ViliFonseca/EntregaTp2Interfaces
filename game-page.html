@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ===========================
+       METADATOS Y ESTILOS
+  ============================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma de Juegos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- ===========================
+       ENCABEZADO PRINCIPAL
+  ============================ -->
+  <header>
+    <!-- Botón Hamburguesa -->
+    <button id="menu-toggle">
+      <span class="hamburger-icon"></span>
+    </button>
+
+    <!-- Barra de Búsqueda -->
+    <div class="search">
+      <input type="text" placeholder="Buscar juegos...">
+      <button>Buscar</button>
+    </div>
+
+    <!-- Botón Usuario -->
+    <button id="user" class="user">
+      <span>Hola Marcelo👋</span>
+      <img src="img/Marcelo.jpeg" alt="Avatar">
+    </button>
+
+    <!-- Menú del Usuario -->
+    <div id="user-menu" class="user-menu">
+      <ul>
+        <li>Perfil</li>
+        <li>Editar Avatar</li>
+        <div class="menu-line"></div> 
+        <li>Configuración</li>
+        <li>Ayuda</li>
+        <div class="menu-line"></div>
+        <li>Cerrar Sesión</li>
+      </ul>
+    </div>
+  </header>
+
+
+  <!-- ===========================
+       CONTENIDO PRINCIPAL
+  ============================ -->
+  <div class="layout">
+
+    <!-- ====== MENÚ LATERAL ====== -->
+    <aside id="menuham">
+      <div class="menuham-inner">
+        <button class="nav-btn active inicio">
+          <span>Inicio</span>
+        </button>
+        <button class="nav-btn juegos">
+          <span>Mis Juegos</span>
+        </button>
+        <button class="nav-btn config">
+          <span>Configuración</span>
+        </button>
+        <div class="menuham-line"></div>
+        <button class="nav-btn salir">
+          <span>Salir</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
+
+
+    <!-- ====== SECCIÓN CENTRAL ====== -->
+    <main class="main-content">
+
+      <!-- ====== BREADCRUMB ====== -->
+      <div class="breadcrumb">
+        <button>Juegos</button>
+        <button>Estrategia</button>
+        <button>Acción</button>
+      </div>
+
+      <!-- ====== PANTALLA DEL VIDEOJUEGO ====== -->
+      <div class="game-screen">
+        <img src="img/peg.jpg" alt="Pantalla del juego">
+        <div class="game-overlay">
+          <h1>Peg Solitaire</h1>
+        </div>
+      </div>
+
+      <!-- ====== DESCRIPCIÓN DEL JUEGO ====== -->
+      <section class="game-info">
+        <h2>Nombre del juego</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed felis dolor...</p>
+
+        <div class="controls">
+          <h3>Controles</h3>
+          <ul>
+            <li>Control 1</li>
+            <li>Control 2</li>
+          </ul>
+        </div>
+
+        <div class="features">
+          <h3>Características</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+      </section>
+
+      <!-- ====== COMENTARIOS ====== -->
+      <section class="comments-section">
+        <h2>Comentarios</h2>
+
+        <!-- Caja para nuevo comentario -->
+        <div class="comment new-comment">
+          <img src="img/avatar.jpg" alt="Tú">
+          <input type="text" placeholder="Deja un comentario">
+        </div>
+
+        <!-- Comentarios existentes -->
+        <div class="comment">
+          <span class="username">Sebb__</span>
+          <p>No entiendo el juego ayuda</p>
+          <span class="date">13/10/2025</span>
+        </div>
+
+        <div class="comment">
+          <span class="username">Stella</span>
+          <p>¡Juegardo!</p>
+          <span class="date">27/11/2025</span>
+        </div>
+
+        <button class="load-more">CARGAR MÁS ▼</button>
+      </section>
+    </main>
+  </div>
+  </div>
+
+
+
+
+  <!-- ===========================
+       PIE DE PÁGINA
+  ============================ -->
+  <footer>
+    <div class="footer-grid">
+
+      <!-- Acerca de -->
+      <div>
+        <h3 class="footer-heading">Acerca de</h3>
+        <div class="footer-line"></div>
+        <ul class="footer-links">
+          <li>Quiénes somos</li>
+          <li>Contacto</li>
+          <li>Trabaja con nosotros</li>
+        </ul>
+      </div>
+
+      <!-- Ayuda -->
+      <div>
+        <h3 class="footer-heading">Ayuda</h3>
+        <div class="footer-line"></div>
+        <ul class="footer-links">
+          <li>Preguntas frecuentes</li>
+          <li>Soporte</li>
+          <li>Política de privacidad</li>
+        </ul>
+      </div>
+
+      <!-- Redes Sociales -->
+      <div>
+        <h3 class="footer-heading">Redes Sociales</h3>
+        <div class="footer-line"></div>
+      </div>
+
+    </div>
+
+    <!-- Parte inferior del footer -->
+    <div class="footer-bottom">
+      © 2025 Todos los derechos reservados.
+    </div>
+  </footer>
+
+
+  <!-- ===========================
+       SCRIPTS
+  ============================ -->
+  <script src="script.js"></script>
+
+</body>
+</html>

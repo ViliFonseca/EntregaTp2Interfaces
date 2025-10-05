@@ -1,172 +1,359 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Plataforma de Juegos</title>
- <link rel="stylesheet" href="css/styles.css">
+  <!-- ===========================
+       METADATOS Y ESTILOS
+  ============================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma de Juegos</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
-<header>
-<button id="menu-toggle"> 
-   <span class="hamburger-icon"></span>
- </button>
+  <!-- ===========================
+       ENCABEZADO PRINCIPAL
+  ============================ -->
+  <header>
+    <!-- Botón Hamburguesa -->
+    <button id="menu-toggle">
+      <span class="hamburger-icon"></span>
+    </button>
 
- <div class="search">
-<input type="text" placeholder="Buscar juegos...">
- <button>Buscar</button>
- </div>
- <button id="user" class="user">
-  <span>Hola Marcelo👋</span>
-  <img src="img/Marcelo.jpeg" alt="Avatar">
-</button>
+    <!-- Barra de Búsqueda -->
+    <div class="search">
+      <input type="text" placeholder="Buscar juegos...">
+      <button>Buscar</button>
+    </div>
 
-<div id="user-menu" class="user-menu">
-  <ul>
-    <li>Perfil</li>
-    <li>Editar Avatar</li>
-    <div class="menu-line"></div> 
-    <li>Configuración</li>
-    <li>Ayuda</li>
-    <div class="menu-line"></div>
-    <li>Cerrar Sesión</li>
-  </ul>
-</div>
-</header>
+    <!-- Botón Usuario -->
+    <button id="user" class="user">
+      <span>Hola Marcelo👋</span>
+      <img src="img/Marcelo.jpeg" alt="Avatar">
+    </button>
 
-<div class="layout">
- <aside id="menuham">
-  <div class="menuham-inner">
-      <button class="nav-btn active inicio">
-    <span>Inicio</span>
-   </button>
-   <button class="nav-btn juegos">
-    <span>Mis Juegos</span>
-   </button>
-   <button class="nav-btn config">
-    <span>Configuración</span>
-   </button>
-   <div class="menuham-line"></div>
-   <button class="nav-btn salir">
-    <span>Salir</span>
-   </button>
+    <!-- Menú del Usuario -->
+    <div id="user-menu" class="user-menu">
+      <ul>
+        <li>Perfil</li>
+        <li>Editar Avatar</li>
+        <div class="menu-line"></div> 
+        <li>Configuración</li>
+        <li>Ayuda</li>
+        <div class="menu-line"></div>
+        <li>Cerrar Sesión</li>
+      </ul>
+    </div>
+  </header>
+
+
+  <!-- ===========================
+       CONTENIDO PRINCIPAL
+  ============================ -->
+  <div class="layout">
+
+    <!-- ====== MENÚ LATERAL ====== -->
+    <aside id="menuham">
+      <div class="menuham-inner">
+        <button class="nav-btn active inicio">
+          <span>Inicio</span>
+        </button>
+        <button class="nav-btn juegos">
+          <span>Mis Juegos</span>
+        </button>
+        <button class="nav-btn config">
+          <span>Configuración</span>
+        </button>
+        <div class="menuham-line"></div>
+        <button class="nav-btn salir">
+          <span>Salir</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
+
+
+    <!-- ====== CONTENIDO CENTRAL ====== -->
+    <main class="main">
+
+      <!-- Portada -->
+      <div class="portada">
+        <img alt="portada">
+        <button class="arrow left">‹</button>
+        <button class="arrow right">›</button>
+        <button class="cta">Jugar Ahora</button>
+        <div class="portada-dots">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <!-- Sección: Juegos Populares -->
+      <section>
+        <h2>Juegos Populares</h2>
+        <div class="carrusel">
+          <div class="game-card large">
+            <img src="img/hollow.jpg" alt="Juego 1">
+            <h3>Juego 1</h3>
+          </div>
+          <div class="game-card large">
+            <img src="img/Isaac.jpeg" alt="Juego 2">
+            <h3>Juego 2</h3>
+          </div>
+          <div class="game-card large">
+            <img src="img/Minecraft.jpeg" alt="Juego 3">
+            <h3>Juego 3</h3>
+          </div>
+          <div class="game-card large">
+            <img src="img/Stardew Valley.jpeg" alt="Juego 4">
+            <h3>Juego 4</h3>
+          </div>
+          <div class="game-card large">
+            <img src="img/Terraria.jpeg" alt="Juego 5">
+            <h3>Juego 5</h3>
+          </div>
+          <div class="game-card large">
+            <img src="img/Undertale.png" alt="Juego 6">
+            <h3>Juego 6</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: Seguir Jugando -->
+      <section>
+        <h2>Seguir Jugando</h2>
+        <div class="carrusel">
+          <div class="game-card small">
+            <img src="img/hollow.jpg" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Isaac.jpeg" alt="Juego B">
+            <h3>Juego B</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Minecraft.jpeg" alt="Juego C">
+            <h3>Juego C</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Stardew Valley.jpeg" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Terraria.jpeg" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Undertale.png" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Isaac.jpeg" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/hollow.jpg" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Sección: Nuevos Juegos-->
+      <section>
+        <h2>Nuevos Juegos</h2>
+        <div class="carrusel">
+          <div class="game-card large">
+            <img src="img/hollow.jpg" alt="Juego 1">
+            <h3>Juego 1</h3>
+          </div>
+          <div class="game-card large">
+            <img src="img/Isaac.jpeg" alt="Juego 2">
+            <h3>Juego 2</h3>
+          </div>
+          <div class="game-card large">
+            <img src="img/Minecraft.jpeg" alt="Juego 3">
+            <h3>Juego 3</h3>
+          </div>
+          <div class="game-card large">
+            <img src="img/Stardew Valley.jpeg" alt="Juego 4">
+            <h3>Juego 4</h3>
+          </div>
+          <div class="game-card large">
+            <img src="img/Terraria.jpeg" alt="Juego 5">
+            <h3>Juego 5</h3>
+          </div>
+          <div class="game-card large">
+            <img src="img/Undertale.png" alt="Juego 6">
+            <h3>Juego 6</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: 4-->
+      <section>
+        <h2>Porque jugaste ...</h2>
+        <div class="carrusel">
+          <div class="game-card small">
+            <img src="img/hollow.jpg" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Isaac.jpeg" alt="Juego B">
+            <h3>Juego B</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Minecraft.jpeg" alt="Juego C">
+            <h3>Juego C</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Stardew Valley.jpeg" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Terraria.jpeg" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Undertale.png" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Isaac.jpeg" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/hollow.jpg" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: 5-->
+      <section>
+        <h2>Terror</h2>
+        <div class="carrusel">
+          <div class="game-card large">
+            <img src="img/hollow.jpg" alt="Juego 1">
+            <h3>Juego 1</h3>
+          </div>
+          <div class="game-card large">
+            <img src="img/Isaac.jpeg" alt="Juego 2">
+            <h3>Juego 2</h3>
+          </div>
+          <div class="game-card large">
+            <img src="img/Minecraft.jpeg" alt="Juego 3">
+            <h3>Juego 3</h3>
+          </div>
+          <div class="game-card large">
+            <img src="img/Stardew Valley.jpeg" alt="Juego 4">
+            <h3>Juego 4</h3>
+          </div>
+          <div class="game-card large">
+            <img src="img/Terraria.jpeg" alt="Juego 5">
+            <h3>Juego 5</h3>
+          </div>
+          <div class="game-card large">
+            <img src="img/Undertale.png" alt="Juego 6">
+            <h3>Juego 6</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: 6-->
+      <section>
+        <h2>Estrategias</h2>
+        <div class="carrusel">
+          <div class="game-card small">
+            <img src="img/hollow.jpg" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Isaac.jpeg" alt="Juego B">
+            <h3>Juego B</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Minecraft.jpeg" alt="Juego C">
+            <h3>Juego C</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Stardew Valley.jpeg" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Terraria.jpeg" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Undertale.png" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Isaac.jpeg" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/hollow.jpg" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+        </div>
+      </section>
+    </main>
   </div>
- </aside>
 
- <div id="overlay" class="overlay"></div>
 
- <main class="main">
-        <div class="portada">
-   <img alt="portada">
-   <button class="arrow left">‹</button>
-   <button class="arrow right">›</button>
-   <button class="cta">Jugar Ahora</button>
-   <div class="portada-dots">
-    <div></div>
-    <div></div>
-    <div></div>
-   </div>
-  </div>
 
-    <section>
-   <h2>Juegos Populares</h2>
-   <div class="carrusel">
-    <div class="game-card large">
-     <img src="img/hollow.jpg" alt="Juego 1">
-     <h3>Juego 1</h3>
-    </div>
-    <div class="game-card large">
-     <img src="img/Isaac.jpeg" alt="Juego 2">
-     <h3>Juego 2</h3>
-    </div>
-    <div class="game-card large">
-     <img src="img/Minecraft.jpeg" alt="Juego 3">
-     <h3>Juego 3</h3>
-    </div>
-    <div class="game-card large">
-     <img src="img/Stardew Valley.jpeg" alt="Juego 4">
-     <h3>Juego 4</h3></div>
-      <div class="game-card large">
-     <img src="img/Terraria.jpeg" alt="Juego 3">
-     <h3>Juego 5</h3>
-    </div>
-     <div class="game-card large">
-     <img src="img/Undertale.png" alt="Juego 3">
-     <h3>Juego 6</h3>
-    </div>
-   </div>
-  </section>
- <section>
-   <h2>Juegos Nuevos</h2>
-   <div class="carrusel">
-    <div class="game-card small">
-     <img src="img/hollow.jpg" alt="Juego A">
-     <h3>Juego A</h3>
-    </div>
-    <div class="game-card small">
-     <img src="img/Isaac.jpeg" alt="Juego B">
-    
- <h3>Juego B</h3>
-    </div>
-    <div class="game-card small">
-     <img src="img/Minecraft.jpeg" alt="Juego C">
-     <h3>Juego C</h3>
-    </div>
-    <div class="game-card small">
-     <img src="img/Stardew Valley.jpeg" alt="Juego A">
-     <h3>Juego A</h3>
-    </div>
-    <div class="game-card small"><img src="img/Terraria.jpeg" alt="Juego A">
-     <h3>Juego A</h3>
-    </div>
-    <div class="game-card small">
-     <img src="img/Undertale.png" alt="Juego A">
-     <h3>Juego A</h3>
-    </div>
-    <div class="game-card small">
-     <img src="img/Isaac.jpeg" alt="Juego A">
-     <h3>Juego A</h3>
-    </div>
-    <div class="game-card small">
-     <img src="img/hollow.jpg" alt="Juego A">
-      <h3>Juego A</h3>
-    </div>
-   </div>
-  </section>
- </main>
-</div>
 
-<footer>
-  <div class="footer-grid">
-  <div>
-   <h3 class="footer-heading">Acerca de</h3>
-   <div class="footer-line"></div>
-   <ul class="footer-links">
-    <li>Quiénes somos</li>
-    <li>Contacto</li>
-    <li>Trabaja con nosotros</li>
-   </ul>
-  </div>
-  <div>
-   <h3 class="footer-heading">Ayuda</h3>
-   <div class="footer-line"></div>
-   <ul class="footer-links">
-    <li>Preguntas frecuentes</li>
-    <li>Soporte</li>
-    <li>Política de privacidad</li>
-   </ul>
-  </div>
-  <div>
-   <h3 class="footer-heading">Redes Sociales</h3>
-   <div class="footer-line"></div>
-  </div>
- </div>
- <div class="footer-bottom">
-  © 2025 Todos los derechos reservados.
- </div>
-</footer>
+  <!-- ===========================
+       PIE DE PÁGINA
+  ============================ -->
+  <footer>
+    <div class="footer-grid">
 
-<script src="script.js"></script>
+      <!-- Acerca de -->
+      <div>
+        <h3 class="footer-heading">Acerca de</h3>
+        <div class="footer-line"></div>
+        <ul class="footer-links">
+          <li>Quiénes somos</li>
+          <li>Contacto</li>
+          <li>Trabaja con nosotros</li>
+        </ul>
+      </div>
+
+      <!-- Ayuda -->
+      <div>
+        <h3 class="footer-heading">Ayuda</h3>
+        <div class="footer-line"></div>
+        <ul class="footer-links">
+          <li>Preguntas frecuentes</li>
+          <li>Soporte</li>
+          <li>Política de privacidad</li>
+        </ul>
+      </div>
+
+      <!-- Redes Sociales -->
+      <div>
+        <h3 class="footer-heading">Redes Sociales</h3>
+        <div class="footer-line"></div>
+      </div>
+
+    </div>
+
+    <!-- Parte inferior del footer -->
+    <div class="footer-bottom">
+      © 2025 Todos los derechos reservados.
+    </div>
+  </footer>
+
+
+  <!-- ===========================
+       SCRIPTS
+  ============================ -->
+  <script src="script.js"></script>
+
 </body>
 </html>
