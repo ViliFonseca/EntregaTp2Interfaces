@@ -80,35 +80,58 @@
 
         <!-- ====== BREADCRUMB ====== -->
         <div class="breadcrumb">
-            <a>Juegos</a>
-            <a>Estrategia</a>
-            <a>Accion</a>
+            <div class="breadcrumb-categoria">
+                <a>Juegos</a>
+            </div>
+            <img href="img/icons/flecha-doble-derecha.png" alt="Flecha indicativa derecha breadcrumb">
+            <div class="breadcrumb-categoria">
+                <a>Juegos</a>
+            </div>
+            <img href="img/icons/flecha-doble-derecha.png" alt="Flecha indicativa derecha breadcrumb">
+            <div class="breadcrumb-categoria">
+                <a>Juegos</a>
+            </div>>
         </div>
 
         <!-- ====== PANTALLA DEL VIDEOJUEGO ====== -->
-        <div class="game-screen">
-            <img src="img/peg.jpg" alt="Pantalla del juego">
-            <div class="game-overlay">
-            <h1>Peg Solitaire</h1>
+        <div class="game-container">
+            <div class="game-placeholder">
+                <div class="game-screen">
+                    <img src="img/peg.jpg" alt="Pantalla del juego">
+                </div>
+                <div class="game-screen-info">
+                    <h2>Peg Solitaire</h2>
+                    <p>Calificacione</p>
+                    <p>Menu</p>
+                </div>
+            </div>
+            <div class="ad-long">
+                <img href="img/ads/ad-long">
             </div>
         </div>
 
         <!-- ====== DESCRIPCIÓN DEL JUEGO ====== -->
-        <section class="game-info">
-            <h2>Nombre del juego</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed felis dolor...</p>
+        <section class="game-info-container">
+            <div class="game-info">
+                <h2>Nombre del juego</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed felis dolor...</p>
 
-            <div class="controls">
-            <h3>Controles</h3>
-            <ul>
-                <li>Control 1</li>
-                <li>Control 2</li>
-            </ul>
+                <div class="controls">
+                <h3>Controles</h3>
+                <ul>
+                    <li>Control 1</li>
+                    <li>Control 2</li>
+                </ul>
+                </div>
+
+                <div class="features">
+                <h3>Características</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                </div>
             </div>
-
-            <div class="features">
-            <h3>Características</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <div class="game-info-ads">
+                <div class="ad-rectangle"></div>
+                <div class="ad-rectangle"></div>
             </div>
         </section>
 
@@ -116,23 +139,60 @@
         <section class="comments-section">
             <h2>Comentarios</h2>
 
-            <!-- Caja para nuevo comentario -->
-            <div class="comment new-comment">
-            <img src="img/avatar.jpg" alt="Tú">
-            <input type="text" placeholder="Deja un comentario">
+            <div class="comment">
+                <div class="comment-profile">
+                    <img src="img/Marcelo.jpeg" alt="Avatar">
+                    <span class="username">Stella</span>
+                    <span class="date">27/11/2025</span>
+                </div>
+                <div class="comment-commentary">
+                    <textarea placeholder="Escribe tu comentario aquí..."></textarea>
+                </div>
             </div>
 
             <!-- Comentarios existentes -->
             <div class="comment">
-            <span class="username">Sebb__</span>
-            <p>No entiendo el juego ayuda</p>
-            <span class="date">13/10/2025</span>
+                <div class="comment-profile">
+                    <img src="img/Marcelo.jpeg" alt="Avatar">
+                    <span class="username">Pitymartinezdios91218</span>
+                    <span class="date">27/11/2025</span>
+                </div>
+                <div class="comment-commentary">
+                    <p>Juegardoo!</p>
+                </div>
             </div>
 
             <div class="comment">
-            <span class="username">Stella</span>
-            <p>¡Juegardo!</p>
-            <span class="date">27/11/2025</span>
+                <div class="comment-profile">
+                    <img src="img/Marcelo.jpeg" alt="Avatar">
+                    <span class="username">Laugames</span>
+                    <span class="date">27/11/2025</span>
+                </div>
+                <div class="comment-commentary">
+                    <p>Clasicazo</p>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-profile">
+                    <img src="img/Marcelo.jpeg" alt="Avatar">
+                    <span class="username">Eltomi</span>
+                    <span class="date">27/11/2025</span>
+                </div>
+                <div class="comment-commentary">
+                    <p>Juegazo para los q no nos corre el cs2</p>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-profile">
+                    <img src="img/Marcelo.jpeg" alt="Avatar">
+                    <span class="username">MarcosXD</span>
+                    <span class="date">27/11/2025</span>
+                </div>
+                <div class="comment-commentary">
+                    <p>Me gusta que sea rápido y sin descargar nada, ideal para matar el tiempo</p>
+                </div>
             </div>
 
             <button class="load-more">CARGAR MÁS ▼</button>
