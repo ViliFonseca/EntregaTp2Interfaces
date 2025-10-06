@@ -534,3 +534,232 @@ footer {
   background: var(--terciary2);
   margin: 5px 0;
 }
+
+/* ==============================
+   LOGIN / REGISTER MODAL
+=============================*/
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.registration-modal {
+  background: #160b14;
+  border-radius: 24px;
+  width: 420px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+.registration-modal.login-mode {
+  height: 500px;
+}
+
+.registration-modal.register-mode {
+  height: 848px;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+}
+
+.modal-title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-content {
+  padding: 0 24px 24px;
+}
+
+
+/* Social Buttons */
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.social-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.google-btn {
+    background: #ffffff;
+    color: #000000;
+}
+
+.facebook-btn {
+    background: #1877f2;
+    color: #ffffff;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 24px 0;
+    gap: 16px;
+}
+
+.divider-line {
+    flex: 1;
+    height: 1px;
+    background: #6a6161;
+}
+
+.divider-text {
+    color: #fffefe;
+    font-size: 16px;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    color: #fffefe;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 16px 20px;
+    background: #6a6161;
+    border: none;
+    border-radius: 50px;
+    color: #fffefe;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.form-input::placeholder {
+    color: #b9b9b9;
+}
+
+.form-input:focus {
+    outline: none;
+    background: #7a7171;
+}
+
+.form-input.small {
+    max-width: 150px;
+}
+
+.required {
+    color: #e33629;
+}
+
+/* reCAPTCHA */
+.recaptcha-container {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0;
+}
+
+.recaptcha-box {
+    background: #ffffff;
+    border: 1px solid #dedddd;
+    border-radius: 4px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.recaptcha-checkbox {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.recaptcha-text {
+    color: #000000;
+    font-size: 14px;
+}
+
+.recaptcha-logo {
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #9e1c7e 0%, #c92a9e 100%);
+    border: none;
+    border-radius: 50px;
+    color: #fffefe;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 24px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(158, 28, 126, 0.4);
+}

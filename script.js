@@ -22,7 +22,17 @@ let portadaIndex = 0;
 // Menú de Usuario
 const userBtn = document.getElementById("user");
 const userMenu = document.getElementById("user-menu");
+const cerrarSesionBtn = document.querySelector("#user-menu li:last-child");
+const userSpan = userBtn.querySelector("span");
+const userImg = userBtn.querySelector("img");
 
+const modalOverlay = document.getElementById("modalOverlay");
+const modalTitle = document.querySelector(".modal-title");
+const modalForm = modalOverlay.querySelector("form");
+const closeBtn = document.querySelector(".close-btn");
+
+let sesionActiva = true;
+let modoRegistro = true; // true = registro, false = login
 
 // ====================================================================
 // 2. LÓGICA DEL CARRUSEL (solo si existe portada)
@@ -103,3 +113,73 @@ if (userBtn && userMenu) {
     }
   });
 }
+// ====================================================================
+// ABRIR / CERRAR SESIÓN
+// ====================================================================
+cerrarSesionBtn.addEventListener("click", () => {
+  sesionActiva = false;
+  userSpan.style.display = "none";
+  userImg.src = "img/images.png"; // avatar por defecto
+  userMenu.classList.remove("open");
+  userImg
+});
+
+// ====================================================================
+// ABRIR / CERRAR MODAL
+// ====================================================================
+userBtn.addEventListener("click", () => {
+  if (!sesionActiva) {
+    modalOverlay.classList.add("active");
+    mostrarRegistro(); // por defecto abre registro
+  }
+});
+
+closeBtn.addEventListener("click", () => modalOverlay.classList.remove("active"));
+modalOverlay.addEventListener("click", e => {
+  if (e.target === modalOverlay) modalOverlay.classList.remove("active");
+});
+
+// ====================================================================
+// FORMULARIO: REGISTRO / LOGIN
+// ====================================================================
+function mostrarRegistro() {
+  modoRegistro = true;
+  modalTitle.textContent = "Registrarse";
+  modalForm.innerHTML = `
+    <div class="form-group"><label>Nombre</label><input type="text" class="form-input" required></div>
+    <div class="form-group"><label>Apellido</label><input type="text" class="form-input" required></div>
+    <div class="form-group"><label>Nickname</label><input type="email" class="form-input" required></div>
+    <div class="form-group"><label>Edad</label><input type="date" class="form-input" required></div>
+    <div class="form-group"><label>Contraseña</label><input type="password" class="form-input" required></div>
+    <div class="form-group"><label>Repetir Contraseña</label><input type="password" class="form-input" required></div>
+    <button type="submit" class="submit-btn">Registrarse</button>
+    <div class="footer-link">¿Ya tienes cuenta? <a href="#" id="toLogin">Inicia sesión</a></div>
+  `;
+}
+
+function mostrarLogin() {
+  modoRegistro = false;
+  modalTitle.textContent = "Iniciar Sesión";
+  modalForm.innerHTML = `
+    <div class="form-group"><label>Correo</label><input type="email" class="form-input" required></div>
+    <div class="form-group"><label>Contraseña</label><input type="password" class="form-input" required></div>
+    <button type="submit" class="submit-btn">Ingresar</button>
+    <div class="footer-link">¿No tienes cuenta? <a href="#" id="toRegister">Regístrate</a></div>
+  `;
+}
+
+
+// ====================================================================
+// CAMBIO ENTRE LOGIN / REGISTRO
+// ====================================================================
+modalOverlay.addEventListener("click", e => {
+  if (e.target.id === "toLogin") {
+    e.preventDefault();
+    mostrarLogin();
+  }
+  if (e.target.id === "toRegister") {
+    e.preventDefault();
+    mostrarRegistro();
+  }
+});
+
