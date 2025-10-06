@@ -608,7 +608,6 @@ footer {
 }
 
 
-/* Social Buttons */
 .social-buttons {
     display: flex;
     flex-direction: column;
@@ -650,7 +649,7 @@ footer {
     height: 24px;
 }
 
-/* Divider */
+
 .divider {
     display: flex;
     align-items: center;
@@ -669,7 +668,6 @@ footer {
     font-size: 16px;
 }
 
-/* Form */
 .form-group {
     margin-bottom: 20px;
 }
@@ -710,7 +708,6 @@ footer {
     color: #e33629;
 }
 
-/* reCAPTCHA */
 .recaptcha-container {
     display: flex;
     justify-content: center;
@@ -744,7 +741,7 @@ footer {
     margin-left: 8px;
 }
 
-/* Submit Button */
+
 .submit-btn {
     width: 100%;
     padding: 16px;

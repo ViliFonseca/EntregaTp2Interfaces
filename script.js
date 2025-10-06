@@ -104,7 +104,14 @@ if (toggle && menuham && overlay) {
 if (userBtn && userMenu) {
   userBtn.addEventListener("click", (e) => {
     e.stopPropagation();
-    userMenu.classList.toggle("open");
+   
+    if (sesionActiva) {
+      
+      userMenu.classList.toggle("open");
+    } else {
+      mostrarLogin();
+      modalOverlay.classList.add("active");
+    }
   });
 
   document.addEventListener("click", (e) => {
@@ -119,7 +126,7 @@ if (userBtn && userMenu) {
 cerrarSesionBtn.addEventListener("click", () => {
   sesionActiva = false;
   userSpan.style.display = "none";
-  userImg.src = "img/images.png"; // avatar por defecto
+  userImg.src = "img/images.png"; 
   userMenu.classList.remove("open");
   userImg
 });
@@ -130,7 +137,7 @@ cerrarSesionBtn.addEventListener("click", () => {
 userBtn.addEventListener("click", () => {
   if (!sesionActiva) {
     modalOverlay.classList.add("active");
-    mostrarRegistro(); // por defecto abre registro
+    mostrarRegistro();
   }
 });
 
