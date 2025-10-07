@@ -48,11 +48,11 @@
   </header>
 
  <!-- Login / Register Pequeño -->
-<div class="modal-overlay" id="modalOverlay" onclick="closeModalOnBackdrop(event)">
+<div class="modal-overlay" id="modalOverlay">
         <div class="registration-modal">
             <div class="modal-header">
                 <h1 class="modal-title">Registrarse</h1>
-                <button class="close-btn" onclick="closeModal()" aria-label="Cerrar">×</button>
+                <button class="close-btn"  aria-label="Cerrar">×</button>
             </div>
             <div class="modal-content">
                 <div class="social-buttons">
@@ -79,7 +79,7 @@
                     <div class="divider-line"></div>
                 </div>
                 
-                <form onsubmit="handleSubmit(event)"> </form>
+                <form> </form>
                      <div class="recaptcha-container">
                         <div class="recaptcha-box">
                             <input type="checkbox" class="recaptcha-checkbox" id="recaptcha" required>
@@ -210,38 +210,56 @@
       <!-- Sección: Juegos Populares -->
       <section>
         <h2>Juegos Populares</h2>
-        <div class="carrusel">
-          <div class="game-card large">
-            <img src="img/hollow.jpg" alt="Juego 1">
-            <h3>Juego 1</h3>
+        <div class="carrusel-container">
+          <button class="carrusel-arrow left" aria-label="Anterior">‹</button>
+          <div class="carrusel">
+            <div class="game-card large">
+              <img src="img/hollow.jpg" alt="Juego 1">
+              <h3>Hollow Knight: Silksong's Grand Adventure</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Isaac.jpeg" alt="Juego 2">
+              <h3>The Binding of Isaac</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Minecraft.jpeg" alt="Juego 3">
+              <h3>Minecraft</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Stardew Valley.jpeg" alt="Juego 4">
+              <h3>Stardew Valley</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Terraria.jpeg" alt="Juego 5">
+              <h3>Terraria</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Undertale.png" alt="Juego 6">
+              <h3>Undertale</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Undertale.png" alt="Juego 6">
+              <h3>FireBoy and AquaGirldasdasdass</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Undertale.png" alt="Juego 6">
+              <h3>Undertale</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Undertale.png" alt="Juego 6">
+              <h3>Undertale</h3>
+            </div>
           </div>
-          <div class="game-card large">
-            <img src="img/Isaac.jpeg" alt="Juego 2">
-            <h3>Juego 2</h3>
-          </div>
-          <div class="game-card large">
-            <img src="img/Minecraft.jpeg" alt="Juego 3">
-            <h3>Juego 3</h3>
-          </div>
-          <div class="game-card large">
-            <img src="img/Stardew Valley.jpeg" alt="Juego 4">
-            <h3>Juego 4</h3>
-          </div>
-          <div class="game-card large">
-            <img src="img/Terraria.jpeg" alt="Juego 5">
-            <h3>Juego 5</h3>
-          </div>
-          <div class="game-card large">
-            <img src="img/Undertale.png" alt="Juego 6">
-            <h3>Juego 6</h3>
-          </div>
+          <button class="carrusel-arrow right" aria-label="Siguiente">›</button>
         </div>
       </section>
 
       <!-- Sección: Seguir Jugando -->
       <section>
-        <h2>Seguir Jugando</h2>
-        <div class="carrusel">
+        <h2>Juegos Populares</h2>
+        <div class="carrusel-container">
+          <button class="carrusel-arrow left" aria-label="Anterior">‹</button>
+          <div class="carrusel">
           <div class="game-card small">
             <img src="img/hollow.jpg" alt="Juego A">
             <h3>Juego A</h3>
@@ -274,44 +292,109 @@
             <img src="img/hollow.jpg" alt="Juego A">
             <h3>Juego A</h3>
           </div>
+          <div class="game-card small">
+            <img src="img/Undertale.png" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+
+          <div class="game-card small">
+            <img src="img/Undertale.png" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Undertale.png" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Undertale.png" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Undertale.png" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          </div>
+             <button class="carrusel-arrow right" aria-label="Siguiente">›</button>
         </div>
       </section>
       
-      <!-- Sección: Nuevos Juegos-->
       <section>
-        <h2>Nuevos Juegos</h2>
-        <div class="carrusel">
-          <div class="game-card large">
-            <img src="img/hollow.jpg" alt="Juego 1">
-            <h3>Juego 1</h3>
+        <h2>Juegos Nuevos</h2>
+        <div class="carrusel-container">
+         <div class="carrusel-container">
+          <button class="carrusel-arrow left" aria-label="Anterior">‹</button>
+          <div class="carrusel">
+          <div class="game-card small">
+            <img src="img/hollow.jpg" alt="Juego A">
+            <h3>Juego A</h3>
           </div>
-          <div class="game-card large">
-            <img src="img/Isaac.jpeg" alt="Juego 2">
-            <h3>Juego 2</h3>
+          <div class="game-card small">
+            <img src="img/Isaac.jpeg" alt="Juego B">
+            <h3>Juego B</h3>
           </div>
-          <div class="game-card large">
-            <img src="img/Minecraft.jpeg" alt="Juego 3">
-            <h3>Juego 3</h3>
+          <div class="game-card small">
+            <img src="img/Minecraft.jpeg" alt="Juego C">
+            <h3>Juego C</h3>
           </div>
-          <div class="game-card large">
-            <img src="img/Stardew Valley.jpeg" alt="Juego 4">
-            <h3>Juego 4</h3>
+          <div class="game-card small">
+            <img src="img/Stardew Valley.jpeg" alt="Juego A">
+            <h3>Juego A</h3>
           </div>
-          <div class="game-card large">
-            <img src="img/Terraria.jpeg" alt="Juego 5">
-            <h3>Juego 5</h3>
+          <div class="game-card small">
+            <img src="img/Terraria.jpeg" alt="Juego A">
+            <h3>Juego A</h3>
           </div>
-          <div class="game-card large">
-            <img src="img/Undertale.png" alt="Juego 6">
-            <h3>Juego 6</h3>
+          <div class="game-card small">
+            <img src="img/Undertale.png" alt="Juego A">
+            <h3>Juego A</h3>
           </div>
+          <div class="game-card small">
+            <img src="img/Isaac.jpeg" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/hollow.jpg" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/hollow.jpg" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+                    <div class="game-card small">
+            <img src="img/hollow.jpg" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+                    <div class="game-card small">
+            <img src="img/hollow.jpg" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Undertale.png" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Undertale.png" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Undertale.png" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Undertale.png" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          </div>
+             <button class="carrusel-arrow right" aria-label="Siguiente">›</button>
         </div>
       </section>
 
       <!-- Sección: 4-->
       <section>
         <h2>Porque jugaste ...</h2>
-        <div class="carrusel">
+         <div class="carrusel-container">
+          <button class="carrusel-arrow left" aria-label="Anterior">‹</button>
+          <div class="carrusel">
           <div class="game-card small">
             <img src="img/hollow.jpg" alt="Juego A">
             <h3>Juego A</h3>
@@ -344,76 +427,147 @@
             <img src="img/hollow.jpg" alt="Juego A">
             <h3>Juego A</h3>
           </div>
+          <div class="game-card small">
+            <img src="img/Undertale.png" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Undertale.png" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Undertale.png" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Undertale.png" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          <div class="game-card small">
+            <img src="img/Undertale.png" alt="Juego A">
+            <h3>Juego A</h3>
+          </div>
+          </div>
+             <button class="carrusel-arrow right" aria-label="Siguiente">›</button>
         </div>
       </section>
 
       <!-- Sección: 5-->
-      <section>
-        <h2>Terror</h2>
-        <div class="carrusel">
-          <div class="game-card large">
-            <img src="img/hollow.jpg" alt="Juego 1">
-            <h3>Juego 1</h3>
+       <section>
+        <h2>Juegos </h2>
+        <div class="carrusel-container">
+          <button class="carrusel-arrow left" aria-label="Anterior">‹</button>
+          <div class="carrusel">
+            <div class="game-card large">
+              <img src="img/hollow.jpg" alt="Juego 1">
+              <h3>Hollow Knight: Silksong's Grand Adventure</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Isaac.jpeg" alt="Juego 2">
+              <h3>The Binding of Isaac</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Minecraft.jpeg" alt="Juego 3">
+              <h3>Minecraft</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Stardew Valley.jpeg" alt="Juego 4">
+              <h3>Stardew Valley</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Terraria.jpeg" alt="Juego 5">
+              <h3>Terraria</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Undertale.png" alt="Juego 6">
+              <h3>Undertale</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Undertale.png" alt="Juego 7">
+              <h3>FireBoy and AquaGirl</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Undertale.png" alt="Juego 8">
+              <h3>Undertale</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Undertale.png" alt="Juego 8">
+              <h3>Undertale</h3>
+            </div>
           </div>
-          <div class="game-card large">
-            <img src="img/Isaac.jpeg" alt="Juego 2">
-            <h3>Juego 2</h3>
-          </div>
-          <div class="game-card large">
-            <img src="img/Minecraft.jpeg" alt="Juego 3">
-            <h3>Juego 3</h3>
-          </div>
-          <div class="game-card large">
-            <img src="img/Stardew Valley.jpeg" alt="Juego 4">
-            <h3>Juego 4</h3>
-          </div>
-          <div class="game-card large">
-            <img src="img/Terraria.jpeg" alt="Juego 5">
-            <h3>Juego 5</h3>
-          </div>
-          <div class="game-card large">
-            <img src="img/Undertale.png" alt="Juego 6">
-            <h3>Juego 6</h3>
-          </div>
+          <button class="carrusel-arrow right" aria-label="Siguiente">›</button>
         </div>
       </section>
 
       <!-- Sección: 6-->
       <section>
         <h2>Estrategias</h2>
-        <div class="carrusel">
-          <div class="game-card small">
-            <img src="img/hollow.jpg" alt="Juego A">
-            <h3>Juego A</h3>
+         <div class="carrusel-container">
+          <button class="carrusel-arrow left" aria-label="Anterior">‹</button>
+          <div class="carrusel">
+            <div class="game-card large">
+              <img src="img/hollow.jpg" alt="Juego 1">
+              <h3>Hollow Knight: Silksong's Grand Adventure</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Isaac.jpeg" alt="Juego 2">
+              <h3>The Binding of Isaac</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Minecraft.jpeg" alt="Juego 3">
+              <h3>Minecraft</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Stardew Valley.jpeg" alt="Juego 4">
+              <h3>Stardew Valley</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Terraria.jpeg" alt="Juego 5">
+              <h3>Terraria</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Undertale.png" alt="Juego 6">
+              <h3>Undertale</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Undertale.png" alt="Juego 7">
+              <h3>FireBoy and AquaGirl</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Undertale.png" alt="Juego 8">
+              <h3>Undertale</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Undertale.png" alt="Juego 8">
+              <h3>Undertale</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Undertale.png" alt="Juego 8">
+              <h3>Undertale</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Undertale.png" alt="Juego 8">
+              <h3>Undertale</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Undertale.png" alt="Juego 8">
+              <h3>Undertale</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Undertale.png" alt="Juego 8">
+              <h3>Undertale</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Undertale.png" alt="Juego 8">
+              <h3>Undertale</h3>
+            </div>
+            <div class="game-card large">
+              <img src="img/Undertale.png" alt="Juego 8">
+              <h3>Undertale</h3>
+            </div>
           </div>
-          <div class="game-card small">
-            <img src="img/Isaac.jpeg" alt="Juego B">
-            <h3>Juego B</h3>
-          </div>
-          <div class="game-card small">
-            <img src="img/Minecraft.jpeg" alt="Juego C">
-            <h3>Juego C</h3>
-          </div>
-          <div class="game-card small">
-            <img src="img/Stardew Valley.jpeg" alt="Juego A">
-            <h3>Juego A</h3>
-          </div>
-          <div class="game-card small">
-            <img src="img/Terraria.jpeg" alt="Juego A">
-            <h3>Juego A</h3>
-          </div>
-          <div class="game-card small">
-            <img src="img/Undertale.png" alt="Juego A">
-            <h3>Juego A</h3>
-          </div>
-          <div class="game-card small">
-            <img src="img/Isaac.jpeg" alt="Juego A">
-            <h3>Juego A</h3>
-          </div>
-          <div class="game-card small">
-            <img src="img/hollow.jpg" alt="Juego A">
-            <h3>Juego A</h3>
-          </div>
+          <button class="carrusel-arrow right" aria-label="Siguiente">›</button>
+        </div>
         </div>
       </section>
     </main>

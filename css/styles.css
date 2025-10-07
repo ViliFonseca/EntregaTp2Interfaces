@@ -167,6 +167,17 @@ aside {
 /* =========================================
   Menu hamburguesa SCROLL
 ========================================= */
+aside:not(.open) .nav-btn{
+ justify-content: center;
+ padding-left: 0px;
+ padding-right: 0px;
+ padding-bottom: 20px;
+ padding-top: 10px;
+ gap:0;
+}
+aside:not(.open) .nav-btn span{
+  display: none;
+}
 aside.open {
   width: 210px;
   overflow-y: auto;   
@@ -179,7 +190,7 @@ aside.open::-webkit-scrollbar {
 aside.open::-webkit-scrollbar-thumb {
   background: var(--terciary1);
   border-radius: 4px;
-    height: 10px;
+
 }
 
 aside.open::-webkit-scrollbar-thumb:hover {
@@ -195,6 +206,7 @@ aside.open::-webkit-scrollbar-thumb:hover {
   height: 0;
   border-top: 1px solid var(--terciary1);
   margin: 10px auto;
+  width: 100%;
 }
 
 aside.open .menuham-line {
@@ -250,7 +262,9 @@ aside.open .nav-btn span {
   flex: 1;
   margin-left: 60px;
   padding: 40px clamp(16px, 6vw, 100px) 80px;
+  min-width: 0; /* <-- AÑADE ESTA LÍNEA */
 }
+
 
 /* ----- Overlay ----- */
 .overlay {
@@ -341,9 +355,8 @@ aside.open .nav-btn span {
 section {
   margin-bottom: 50px;
   position: relative;
-  overflow: visible;
+  overflow: hidden; /* <-- Esta es la solución */
 }
-
 section h2 {
   font-size: 20px;
   font-weight: 700;
@@ -353,18 +366,72 @@ section h2 {
 }
 
 /* ----- Carruseles ----- */
+.carrusel-container {
+  position: relative;
+  margin: 0 -10px; 
+}
 .carrusel {
   display: flex;
   gap: 10px;
-  overflow-x: auto;
-  padding-bottom: 10px;
+  overflow-x: auto; 
+  padding: 0 30px 10px 30px; 
+
   scroll-snap-type: x mandatory;
   position: relative;
   z-index: 2;
+  scroll-behavior: smooth;
+  scroll-padding-left: 10px; 
+  scroll-padding-right: 30px;
+}
+.carrusel::-webkit-scrollbar { 
+  display: none; 
+}
+.carrusel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(0.9);
+  z-index: 10;
+  
+
+  background: rgba(25, 25, 25, 0.5); 
+  backdrop-filter: blur(8px); 
+  -webkit-backdrop-filter: blur(8px); 
+  border: 1px solid rgba(255, 255, 255, 0.15); 
+
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease;
 }
 
-.carrusel::-webkit-scrollbar { display: none; }
+.carrusel-container:hover .carrusel-arrow {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+  pointer-events: auto;
+}
 
+.carrusel-arrow.left {
+  left: 10px;
+}
+
+.carrusel-arrow.right {
+  right: 10px;
+}
+
+.carrusel-arrow:hover {
+  background: rgba(126, 13, 98, 0.7); 
+  transform: translateY(-50%) scale(1.1);
+}
 /* ----- Tarjetas de Juegos ----- */
 .game-card {
   scroll-snap-align: start;
@@ -805,9 +872,9 @@ footer {
   margin: 5px 0;
 }
 
-/* ==============================
-   LOGIN / REGISTER MODAL
-=============================*/
+/* ==================
+   LOGIN / REGISTER
+=====================*/
 .modal-overlay {
   position: fixed;
   inset: 0;

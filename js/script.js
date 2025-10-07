@@ -192,3 +192,51 @@ modalOverlay.addEventListener("click", e => {
   }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const carruselContainers = document.querySelectorAll('.carrusel-container');
+
+  carruselContainers.forEach(container => {
+    const carrusel = container.querySelector('.carrusel');
+    const leftArrow = container.querySelector('.carrusel-arrow.left');
+    const rightArrow = container.querySelector('.carrusel-arrow.right');
+
+    const updateArrowVisibility = () => {
+      // Ocultar flecha izquierda si estamos al principio
+      if (carrusel.scrollLeft === 0) {
+        leftArrow.classList.add('hidden');
+      } else {
+        leftArrow.classList.remove('hidden');
+      }
+      
+      // Ocultar flecha derecha si llegamos al final
+      // El +1 es un pequeño margen por si hay decimales en los anchos
+      if (carrusel.scrollLeft + carrusel.clientWidth + 1 >= carrusel.scrollWidth) {
+        rightArrow.classList.add('hidden');
+      } else {
+        rightArrow.classList.remove('hidden');
+      }
+    };
+
+    leftArrow.addEventListener('click', () => {
+      const scrollAmount = carrusel.clientWidth * 0.8; // Desplaza el 80% del ancho visible
+      carrusel.scrollBy({
+        left: -scrollAmount,
+        behavior: 'smooth'
+      });
+    });
+
+    rightArrow.addEventListener('click', () => {
+      const scrollAmount = carrusel.clientWidth * 0.8;
+      carrusel.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    });
+
+    // Actualiza la visibilidad de las flechas cuando el scroll cambia
+    carrusel.addEventListener('scroll', updateArrowVisibility);
+    
+    // Llama a la función una vez al inicio para el estado inicial
+    updateArrowVisibility(); 
+  });
+});
