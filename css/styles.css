@@ -215,7 +215,6 @@ aside.open .menuham-line {
   transition: background 0.2s, color 0.2s;
   position: relative;
 }
-
 .nav-btn:hover { color: var(--primary1); }
 
 .nav-btn span {
