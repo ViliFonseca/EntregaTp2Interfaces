@@ -7,18 +7,6 @@ const menuham = document.getElementById('menuham');
 const toggle = document.getElementById('menu-toggle');
 const overlay = document.getElementById('overlay');
 
-// Carrusel (Portada) - SOLO existe en Index.html
-const portada = document.querySelector('.portada img');
-const leftBtn = document.querySelector('.portada .arrow.left');
-const rightBtn = document.querySelector('.portada .arrow.right');
-const dots = document.querySelectorAll('.portada-dots div');
-const portadaImgs = [
-  "img/hollow.jpg",
-  "img/Videogame/Videogame-preview.jpg",
-  "img/GranTurismo.jpg"
-];
-let portadaIndex = 0;
-
 // Menú de Usuario
 const userBtn = document.getElementById("user");
 const userMenu = document.getElementById("user-menu");
@@ -36,39 +24,45 @@ let modoRegistro = false;
 
 
 // ====================================================================
-// 2. LÓGICA DEL CARRUSEL (solo si existe portada)
+// 2. PORTADA - CARRUSEL ANIMADO
 // ====================================================================
-if (portada && leftBtn && rightBtn && dots.length > 0) {
-  function setActiveDot(index) {
-    dots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === index);
-    });
-  }
+const slides = document.querySelectorAll('.portada-slide');
+const portadaDots = document.querySelectorAll('.portada-dots div');
+let current = 0;
 
-  function mostrarPortada(index) {
-    portada.src = portadaImgs[index];
-    setActiveDot(index);
-  }
-
-  leftBtn.addEventListener('click', () => {
-    portadaIndex = (portadaIndex - 1 + portadaImgs.length) % portadaImgs.length;
-    mostrarPortada(portadaIndex);
+function updateSlides(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active', 'prev', 'next');
+    if (i === index) slide.classList.add('active');
+    if (i === (index - 1 + slides.length) % slides.length) slide.classList.add('prev');
+    if (i === (index + 1) % slides.length) slide.classList.add('next');
   });
 
-  rightBtn.addEventListener('click', () => {
-    portadaIndex = (portadaIndex + 1) % portadaImgs.length;
-    mostrarPortada(portadaIndex);
+  portadaDots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
   });
+}
 
-  dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => {
-      portadaIndex = i;
-      mostrarPortada(i);
-    });
+document.querySelector('.portada .arrow.left').addEventListener('click', () => {
+  current = (current - 1 + slides.length) % slides.length;
+  updateSlides(current);
+});
+
+document.querySelector('.portada .arrow.right').addEventListener('click', () => {
+  current = (current + 1) % slides.length;
+  updateSlides(current);
+});
+
+portadaDots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    current = i;
+    updateSlides(current);
   });
+});
 
-  // Inicializar portada
-  mostrarPortada(0);
+// Inicializar
+if (slides.length > 0) {
+  updateSlides(current);
 }
 
 
@@ -107,7 +101,6 @@ if (userBtn && userMenu) {
     e.stopPropagation();
    
     if (sesionActiva) {
-      
       userMenu.classList.toggle("open");
     } else {
       mostrarLogin();
@@ -121,6 +114,7 @@ if (userBtn && userMenu) {
     }
   });
 }
+
 // ====================================================================
 // ABRIR / CERRAR SESIÓN
 // ====================================================================
@@ -154,7 +148,7 @@ function mostrarRegistro() {
   modalTitle.textContent = "Registrarse";
   modalForm.innerHTML = `
     <div class="form-group"><label class=form-label>Nombre</label><input type="text" class="form-input" required></div>
-    <div class="form-group"><label class=form-label >Apellido</label><input type="text" class="form-input" required></div>
+    <div class="form-group"><label class=form-label>Apellido</label><input type="text" class="form-input" required></div>
     <div class="form-group"><label class=form-label>Nickname</label><input type="text" class="form-input" required></div>
     <div class="form-group"><label class=form-label>E-Mail</label><input type="email" class="form-input" required></div>
     <div class="form-group"><label class=form-label >Fecha de nacimiento</label><input type="date" class="form-input" required></div>
@@ -177,7 +171,6 @@ function mostrarLogin() {
   `;
 }
 
-
 // ====================================================================
 // CAMBIO ENTRE LOGIN / REGISTRO
 // ====================================================================
@@ -192,6 +185,10 @@ modalOverlay.addEventListener("click", e => {
   }
 });
 
+
+// ====================================================================
+// 5. LÓGICA DE LOS CARRUSELES HORIZONTALES
+// ====================================================================
 document.addEventListener('DOMContentLoaded', () => {
   const carruselContainers = document.querySelectorAll('.carrusel-container');
 
@@ -201,15 +198,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightArrow = container.querySelector('.carrusel-arrow.right');
 
     const updateArrowVisibility = () => {
-      // Ocultar flecha izquierda si estamos al principio
       if (carrusel.scrollLeft === 0) {
         leftArrow.classList.add('hidden');
       } else {
         leftArrow.classList.remove('hidden');
       }
-      
-      // Ocultar flecha derecha si llegamos al final
-      // El +1 es un pequeño margen por si hay decimales en los anchos
+
       if (carrusel.scrollLeft + carrusel.clientWidth + 1 >= carrusel.scrollWidth) {
         rightArrow.classList.add('hidden');
       } else {
@@ -218,25 +212,16 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     leftArrow.addEventListener('click', () => {
-      const scrollAmount = carrusel.clientWidth * 0.8; // Desplaza el 80% del ancho visible
-      carrusel.scrollBy({
-        left: -scrollAmount,
-        behavior: 'smooth'
-      });
+      const scrollAmount = carrusel.clientWidth * 0.8;
+      carrusel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     });
 
     rightArrow.addEventListener('click', () => {
       const scrollAmount = carrusel.clientWidth * 0.8;
-      carrusel.scrollBy({
-        left: scrollAmount,
-        behavior: 'smooth'
-      });
+      carrusel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     });
 
-    // Actualiza la visibilidad de las flechas cuando el scroll cambia
     carrusel.addEventListener('scroll', updateArrowVisibility);
-    
-    // Llama a la función una vez al inicio para el estado inicial
-    updateArrowVisibility(); 
+    updateArrowVisibility();
   });
 });
