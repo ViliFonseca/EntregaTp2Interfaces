@@ -401,13 +401,16 @@ section h2 {
 .ad-long{
   width: 160px;
   height: 600px;
-  background-color: #FFC107;
+  background-color: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  object-fit: cover;
+  display: block;
 }
 
-.ad-rectangle{
+.ad-box{
   width: 336px;
   height: 280px;
-  background-color: #FFC107;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); 
 }
 
 /* =========================================
@@ -415,14 +418,12 @@ section h2 {
 ========================================= */
 .main-games{
   flex: 1;
-  margin-left: 22px;
-  padding: 40px clamp(16px, 6vw, 100px) 80px;
+  padding: 20px;
+  margin-left: 210px;
 }
 
- /* Breadcrumb */
-
 .game-container{
-  width: auto;
+  width: 100%;
   display:flex;
 }
 .game-container .ad-long{
@@ -430,7 +431,9 @@ section h2 {
 }
  .breadcrumb{
   display:flex;
+  align-items: center;
   padding-bottom: 16px;
+  gap: 5px;
  }
 
 .game-placeholder{
@@ -462,6 +465,111 @@ section h2 {
   display: flex;
   flex-direction: row;
   text-align: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); 
+}
+
+.game-screen-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.game-screen-menu a{
+  cursor: pointer;
+}
+
+.game-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.game-play-button{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 118px;
+  background-color: #2D2929;
+  border: 2px solid #6A6161;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.game-show{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;               
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  z-index: 1;
+}
+
+.game-play-button{
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1); 
+}
+
+.game-play-button a{
+  margin-bottom: 13px;
+  padding: 0;
+}
+
+.game-info-icons{
+  display:flex;
+  gap: 70px;
+  align-items: center;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.game-name{
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.share-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Ajuste para centrar exactamente */
+  background: #2d2929;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #555;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 2;
+  min-width: 250px;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+
+.share-container input {
+  width: 100%;              /* Ocupa todo el ancho del container */
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
 }
 
 .game-info-container{
@@ -475,6 +583,8 @@ section h2 {
   background-color: var(--secondary1);
   width: 724px;
   height: 580px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); 
 }
 
 .game-info-ads{
@@ -484,10 +594,37 @@ section h2 {
   margin-left: auto;
 }
 
+.game-info-ads img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.controls{
+  display: flex;
+  text-align: center;
+  gap: 10px;
+}
+
+.controls-control{
+  width: auto;
+  background-color: #130e12;
+}
+
 .comments-section{
   color: var(--terciary5);
   width: 1080px;
   height: 800px;  
+}
+
+.comment-header{
+  display:flex;
+  align-items: center;
+}
+
+.comment-header svg{
+  margin-left: 10px;
 }
 
 .load-more{
@@ -500,6 +637,7 @@ section h2 {
   height: 100px;
   margin-bottom: 15px;
   display: flex;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); 
 }
 
 .comment-profile{
@@ -530,6 +668,31 @@ section h2 {
 
 .comment-commentary{
   margin-left: 10px;
+  width: 960px;
+}
+
+.comment-form{
+  width: 960px;
+  padding: 5px;
+}
+
+.comment-form textarea{
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  resize: none;
+  background-color:#2d2929;
+  color: #FFFEFE;
+
+}
+
+.comment-more{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:5px;
 }
 
 

@@ -83,69 +83,127 @@
             <div class="breadcrumb-categoria">
                 <a>Juegos</a>
             </div>
-            <img href="img/icons/flecha-doble-derecha.png" alt="Flecha indicativa derecha breadcrumb">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="#fff" d="M452.864 149.312a29.12 29.12 0 0 1 41.728.064L826.24 489.664a32 32 0 0 1 0 44.672L494.592 874.624a29.12 29.12 0 0 1-41.728 0a30.59 30.59 0 0 1 0-42.752L764.736 512L452.864 192a30.59 30.59 0 0 1 0-42.688m-256 0a29.12 29.12 0 0 1 41.728.064L570.24 489.664a32 32 0 0 1 0 44.672L238.592 874.624a29.12 29.12 0 0 1-41.728 0a30.59 30.59 0 0 1 0-42.752L508.736 512L196.864 192a30.59 30.59 0 0 1 0-42.688"/></svg>
             <div class="breadcrumb-categoria">
-                <a>Juegos</a>
+                <a>Juegos de Mesa</a>
             </div>
-            <img href="img/icons/flecha-doble-derecha.png" alt="Flecha indicativa derecha breadcrumb">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="#fff" d="M452.864 149.312a29.12 29.12 0 0 1 41.728.064L826.24 489.664a32 32 0 0 1 0 44.672L494.592 874.624a29.12 29.12 0 0 1-41.728 0a30.59 30.59 0 0 1 0-42.752L764.736 512L452.864 192a30.59 30.59 0 0 1 0-42.688m-256 0a29.12 29.12 0 0 1 41.728.064L570.24 489.664a32 32 0 0 1 0 44.672L238.592 874.624a29.12 29.12 0 0 1-41.728 0a30.59 30.59 0 0 1 0-42.752L508.736 512L196.864 192a30.59 30.59 0 0 1 0-42.688"/></svg>
             <div class="breadcrumb-categoria">
-                <a>Juegos</a>
-            </div>>
+                <a>Estrategia</a>
+            </div>
         </div>
 
         <!-- ====== PANTALLA DEL VIDEOJUEGO ====== -->
         <div class="game-container">
             <div class="game-placeholder">
                 <div class="game-screen">
-                    <img src="img/peg.jpg" alt="Pantalla del juego">
+                    <img src="img/videogame/Videogame-preview.jpg" alt="Pantalla del juego">
+                    <div id="shareContainer" class="share-container">
+                      <h3>Compartir este juego</h3>
+                      <input type="text" value="https://pagina.com/peg-solitaire" readonly>
+                      <button id="closeShare">Cerrar</button>
+                    </div>
+                    <div class="game-overlay" id="gameOverlay">
+                      <div class="game-play-button">
+                        <h3>JUGAR</h3>
+                        <a class="play-btn"  id="playButton">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 14 14"><g fill="none"><path fill="#9E1C7E" d="M1.436 12.33a1.14 1.14 0 0 0 .63 1a1.24 1.24 0 0 0 1.22 0l8.65-5.35a1.11 1.11 0 0 0 0-2L3.286.67a1.24 1.24 0 0 0-1.22 0a1.14 1.14 0 0 0-.63 1z"/><path stroke="#fafaff" stroke-linecap="round" stroke-linejoin="round" d="M1.436 12.33a1.14 1.14 0 0 0 .63 1a1.24 1.24 0 0 0 1.22 0l8.65-5.35a1.11 1.11 0 0 0 0-2L3.286.67a1.24 1.24 0 0 0-1.22 0a1.14 1.14 0 0 0-.63 1z" stroke-width="1"/></g></svg>             
+                        </a>
+                      </div>
+                    </div>
+                    <div class="game-show" id="playingScreen">
+                      <img src="img/videogame/Videogame-playing.png" alt="Pantalla del juego">
+                    </div>
                 </div>
+                
                 <div class="game-screen-info">
-                    <h2>Peg Solitaire</h2>
-                    <p>Calificacione</p>
-                    <p>Menu</p>
+                    <div class="game-name">
+                      <h3>Peg Solitaire: Counter Strike</h3>
+                    </div>
+                    <div class="game-info-icons">
+                      <div class="game-screen-rating">
+                        <div class="game-star-row">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#B9B9B9" d="m8.85 16.825l3.15-1.9l3.15 1.925l-.825-3.6l2.775-2.4l-3.65-.325l-1.45-3.4l-1.45 3.375l-3.65.325l2.775 2.425zM5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275zM12 12.25"/></svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#B9B9B9" d="m8.85 16.825l3.15-1.9l3.15 1.925l-.825-3.6l2.775-2.4l-3.65-.325l-1.45-3.4l-1.45 3.375l-3.65.325l2.775 2.425zM5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275zM12 12.25"/></svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#B9B9B9" d="m8.85 16.825l3.15-1.9l3.15 1.925l-.825-3.6l2.775-2.4l-3.65-.325l-1.45-3.4l-1.45 3.375l-3.65.325l2.775 2.425zM5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275zM12 12.25"/></svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#B9B9B9" d="m8.85 16.825l3.15-1.9l3.15 1.925l-.825-3.6l2.775-2.4l-3.65-.325l-1.45-3.4l-1.45 3.375l-3.65.325l2.775 2.425zM5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275zM12 12.25"/></svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#B9B9B9" d="m8.85 16.825l3.15-1.9l3.15 1.925l-.825-3.6l2.775-2.4l-3.65-.325l-1.45-3.4l-1.45 3.375l-3.65.325l2.775 2.425zM5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275zM12 12.25"/></svg>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#B9B9B9" d="M5 9v12H1V9zm4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21zm0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#B9B9B9" d="M19 15V3h4v12zM15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31l.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3zm0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97z"/></svg>
+                      </div>
+                      
+                      <div class="game-screen-menu">
+                        <a id="fullscreenBtn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" stroke="#B9B9B9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 15l6 6M15 9l6-6m0 13v5h-5m5-13V3h-5M3 16v5h5m-5 0l6-6M3 8V3h5m1 6L3 3"/></svg></a>
+                        <a id="likeBtn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#B9B9B9" d="m12.1 18.55l-.1.1l-.11-.1C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5c1.54 0 3.04 1 3.57 2.36h1.86C13.46 6 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5c0 2.89-3.14 5.74-7.9 10.05M16.5 3c-1.74 0-3.41.81-4.5 2.08C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.41 2 8.5c0 3.77 3.4 6.86 8.55 11.53L12 21.35l1.45-1.32C18.6 15.36 22 12.27 22 8.5C22 5.41 19.58 3 16.5 3"/></svg></a>
+                        <a id="shareBtn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#B9B9B9" d="M17 22q-1.25 0-2.125-.875T14 19q0-.15.075-.7L7.05 14.2q-.4.375-.925.588T5 15q-1.25 0-2.125-.875T2 12t.875-2.125T5 9q.6 0 1.125.213t.925.587l7.025-4.1q-.05-.175-.062-.337T14 5q0-1.25.875-2.125T17 2t2.125.875T20 5t-.875 2.125T17 8q-.6 0-1.125-.213T14.95 7.2l-7.025 4.1q.05.175.063.338T8 12t-.012.363t-.063.337l7.025 4.1q.4-.375.925-.587T17 16q1.25 0 2.125.875T20 19t-.875 2.125T17 22"/></svg></a>
+                      </div>
+                    </div>
+                    
                 </div>
             </div>
             <div class="ad-long">
-                <img href="img/ads/ad-long">
+                <img src="img/Ads/warthunder-large.png">
             </div>
         </div>
 
         <!-- ====== DESCRIPCIÓN DEL JUEGO ====== -->
         <section class="game-info-container">
             <div class="game-info">
-                <h2>Nombre del juego</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed felis dolor...</p>
+                <h2>Peg Solitaire: Counter Strike</h2>
+                <p>Poné a prueba tu puntería y estrategia en este Peg Solitaire con temática Counter-Strike.
+                  Mové las fichas con forma de tu equipo favorito y elimina las demás hasta que quede solo una en pie en el centro del tablero.
+                  ¡Cada movimiento cuenta, como en un clutch 1v5! 🪖💣
+                  ¿Tenés lo que se necesita para convertirte en el MVP del tablero? 🏆
+                </p>
 
-                <div class="controls">
                 <h3>Controles</h3>
-                <ul>
-                    <li>Control 1</li>
-                    <li>Control 2</li>
-                </ul>
+                <div class="controls">
+                  <div class="controls-control">
+                    <p>Arrastra el mouse para seleccionar una ficha!</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><g fill="#fff"><path d="M144 88v48a8 8 0 0 1-8 8h-16a8 8 0 0 1-8-8V88a8 8 0 0 1 8-8h16a8 8 0 0 1 8 8" opacity="0.2"/><path d="M144 16h-32a64.07 64.07 0 0 0-64 64v96a64.07 64.07 0 0 0 64 64h32a64.07 64.07 0 0 0 64-64V80a64.07 64.07 0 0 0-64-64m48 64v24h-40V88a16 16 0 0 0-16-16V32h8a48.05 48.05 0 0 1 48 48m-56 56h-16V88h16v23.9a.5.5 0 0 0 0 .2ZM112 32h8v40a16 16 0 0 0-16 16v16H64V80a48.05 48.05 0 0 1 48-48m32 192h-32a48.05 48.05 0 0 1-48-48v-56h40v16a16 16 0 0 0 16 16h16a16 16 0 0 0 16-16v-16h40v56a48.05 48.05 0 0 1-48 48"/></g></svg>
+                  </div>
+                  <div class="controls-control">
+                    <p>Con el click izquierdo seleccionas la ficha para moverla</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="#fff" stroke-width="1.5"><path stroke-linecap="round" d="M10 2.318C10.73 2.111 11.56 2 12.5 2c6 0 7.5 4.51 7.5 10s-1.5 10-7.5 10S5 17.49 5 12q0-.765.041-1.5"/><path d="M14 7c0-.466 0-.699-.076-.883a1 1 0 0 0-.541-.54c-.184-.077-.417-.077-.883-.077s-.699 0-.883.076a1 1 0 0 0-.54.541C11 6.301 11 6.534 11 7v.5c0 .466 0 .699.076.883a1 1 0 0 0 .541.54c.184.077.417.077.883.077s.699 0 .883-.076a1 1 0 0 0 .54-.541C14 8.199 14 7.966 14 7.5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12.5 5.5V2m0 10V9m-7 3h14"/><circle cx="5.5" cy="5.5" r="2.5"/></g></svg>
+                  </div>
                 </div>
 
                 <div class="features">
                 <h3>Características</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                <ul>
+                  <li>Formato: Juego de mesa estratégico inspirado en Counter Strike.</li>
+                  <li>Jugadores: 1 jugador</li>
+                  <li>Duración de partida: 5 a 10 min</li>
+                  <li>Género: Estrategia, táctica y confrontación directa.</li>
+                  <li>Ambientación: Mapas clásicos adaptados al tablero.</li>
+                  <li>Objetivo: Eliminar al rival al dejarlo sin movimientos</li>
+                  <li>Edad recomendada: 12+ años.</li>
+                </ul>
                 </div>
             </div>
             <div class="game-info-ads">
-                <div class="ad-rectangle"></div>
-                <div class="ad-rectangle"></div>
+                <div class="ad-box">
+                  <img src="img/Ads/warthunder-box.png">
+                </div>
+                <div class="ad-box">
+                  <img src="img/Ads/albiononline-box.jpg">
+                </div>
             </div>
         </section>
 
         <!-- ====== COMENTARIOS ====== -->
         <section class="comments-section">
+          <div class="comment-header">
             <h2>Comentarios</h2>
-
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9 9 0 1 0-9-9c0 1.488.36 2.89 1 4.127L3 21l4.873-1c1.236.639 2.64 1 4.127 1"/></svg>
+          </div>
             <div class="comment">
                 <div class="comment-profile">
                     <img src="img/Marcelo.jpeg" alt="Avatar">
-                    <span class="username">Stella</span>
-                    <span class="date">27/11/2025</span>
+                    <span class="username">Marcelo</span>
                 </div>
-                <div class="comment-commentary">
+                <div class="comment-form">
                     <textarea placeholder="Escribe tu comentario aquí..."></textarea>
                 </div>
             </div>
@@ -153,9 +211,9 @@
             <!-- Comentarios existentes -->
             <div class="comment">
                 <div class="comment-profile">
-                    <img src="img/Marcelo.jpeg" alt="Avatar">
+                    <img src="img/ProfilePictures/1.png" alt="Avatar">
                     <span class="username">Pitymartinezdios91218</span>
-                    <span class="date">27/11/2025</span>
+                    <span class="date">5/10/2025</span>
                 </div>
                 <div class="comment-commentary">
                     <p>Juegardoo!</p>
@@ -164,9 +222,9 @@
 
             <div class="comment">
                 <div class="comment-profile">
-                    <img src="img/Marcelo.jpeg" alt="Avatar">
+                    <img src="img/ProfilePictures/2.png" alt="Avatar">
                     <span class="username">Laugames</span>
-                    <span class="date">27/11/2025</span>
+                    <span class="date">3/10/20255</span>
                 </div>
                 <div class="comment-commentary">
                     <p>Clasicazo</p>
@@ -175,9 +233,9 @@
 
             <div class="comment">
                 <div class="comment-profile">
-                    <img src="img/Marcelo.jpeg" alt="Avatar">
+                    <img src="img/ProfilePictures/3.jpg" alt="Avatar">
                     <span class="username">Eltomi</span>
-                    <span class="date">27/11/2025</span>
+                    <span class="date">1/10/2025</span>
                 </div>
                 <div class="comment-commentary">
                     <p>Juegazo para los q no nos corre el cs2</p>
@@ -186,16 +244,39 @@
 
             <div class="comment">
                 <div class="comment-profile">
-                    <img src="img/Marcelo.jpeg" alt="Avatar">
+                    <img src="img/ProfilePictures/4.jpg" alt="Avatar">
                     <span class="username">MarcosXD</span>
-                    <span class="date">27/11/2025</span>
+                    <span class="date">30/9/2025</span>
                 </div>
                 <div class="comment-commentary">
                     <p>Me gusta que sea rápido y sin descargar nada, ideal para matar el tiempo</p>
                 </div>
             </div>
+                        <div class="comment">
+                <div class="comment-profile">
+                    <img src="img/ProfilePictures/5.jpg" alt="Avatar">
+                    <span class="username">CABJjuan</span>
+                    <span class="date">28/9/2025</span>
+                </div>
+                <div class="comment-commentary">
+                    <p>No lo entiendo</p>
+                </div>
+            </div>
 
-            <button class="load-more">CARGAR MÁS ▼</button>
+            <div class="comment">
+                <div class="comment-profile">
+                    <img src="img/ProfilePictures/6.jpg" alt="Avatar">
+                    <span class="username">Angel</span>
+                    <span class="date">25/9/2025</span>
+                </div>
+                <div class="comment-commentary">
+                    <p>FAcilll</p>
+                </div>
+            </div>
+
+            <div class="comment-more">
+              <a><h3>CARGAR MÁS</h3></a>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m6 13l6 6l6-6M6 5l6 6l6-6"/></svg>            </div>
         </section>
         </main>
     </div>
@@ -249,7 +330,7 @@
   <!-- ===========================
        SCRIPTS
   ============================ -->
-  <script src="script.js"></script>
-
+  <script src="js/script.js"></script>
+  <script src="js/videogame.js"></script>
 </body>
 </html>
