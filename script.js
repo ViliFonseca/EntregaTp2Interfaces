@@ -32,7 +32,7 @@ const modalForm = modalOverlay.querySelector("form");
 const closeBtn = document.querySelector(".close-btn");
 
 let sesionActiva = true;
-let modoRegistro = true; // true = registro, false = login
+let modoRegistro = false;
 
 // ====================================================================
 // 2. LÓGICA DEL CARRUSEL (solo si existe portada)
@@ -128,7 +128,6 @@ cerrarSesionBtn.addEventListener("click", () => {
   userSpan.style.display = "none";
   userImg.src = "img/images.png"; 
   userMenu.classList.remove("open");
-  userImg
 });
 
 // ====================================================================
@@ -153,14 +152,16 @@ function mostrarRegistro() {
   modoRegistro = true;
   modalTitle.textContent = "Registrarse";
   modalForm.innerHTML = `
-    <div class="form-group"><label>Nombre</label><input type="text" class="form-input" required></div>
-    <div class="form-group"><label>Apellido</label><input type="text" class="form-input" required></div>
-    <div class="form-group"><label>Nickname</label><input type="email" class="form-input" required></div>
-    <div class="form-group"><label>Edad</label><input type="date" class="form-input" required></div>
-    <div class="form-group"><label>Contraseña</label><input type="password" class="form-input" required></div>
-    <div class="form-group"><label>Repetir Contraseña</label><input type="password" class="form-input" required></div>
+    <div class="form-group"><label class=form-label>Nombre</label><input type="text" class="form-input" required></div>
+    <div class="form-group"><label class=form-label >Apellido</label><input type="text" class="form-input" required></div>
+    <div class="form-group"><label class=form-label>Nickname</label><input type="text" class="form-input" required></div>
+    <div class="form-group"><label class=form-label>E-Mail</label><input type="email" class="form-input" required></div>
+    <div class="form-group"><label class=form-label >Fecha de nacimiento</label><input type="date" class="form-input" required></div>
+    <div class="form-group"><label class=form-label>Contraseña</label><input type="password" class="form-input" required></div>
+    <div class="form-group"><label class=form-label>Repetir Contraseña</label><input type="password" class="form-input" required></div>
+    </div>
     <button type="submit" class="submit-btn">Registrarse</button>
-    <div class="footer-link">¿Ya tienes cuenta? <a href="#" id="toLogin">Inicia sesión</a></div>
+    <div class="footer-link">¿Ya tienes cuenta? <a href="#" id="toLogin">Inicia sesión</a>
   `;
 }
 
@@ -168,8 +169,8 @@ function mostrarLogin() {
   modoRegistro = false;
   modalTitle.textContent = "Iniciar Sesión";
   modalForm.innerHTML = `
-    <div class="form-group"><label>Correo</label><input type="email" class="form-input" required></div>
-    <div class="form-group"><label>Contraseña</label><input type="password" class="form-input" required></div>
+    <div class="form-group"><label class=form-label>E-Mail</label><input type="email" class="form-input" required></div>
+    <div class="form-group"><label class=form-label>Contraseña</label><input type="password" class="form-input" required></div>
     <button type="submit" class="submit-btn">Ingresar</button>
     <div class="footer-link">¿No tienes cuenta? <a href="#" id="toRegister">Regístrate</a></div>
   `;

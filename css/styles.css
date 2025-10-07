@@ -375,11 +375,7 @@ section h2 {
   background: var(--secondary3);
   transition: transform .2s, border-color .2s;
   flex-shrink: 0;
-  z-index: 1;
-}
-section, .carrusel, .main, .main-games {
-  overflow: visible;
-}
+  z-index: 1;}
 
 
 .game-card.large { width: 200px; }
@@ -407,7 +403,22 @@ section, .carrusel, .main, .main-games {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+/* =========================================
+  ADS
+========================================= */
 
+
+.ad-long{
+  width: 160px;
+  height: 600px;
+  background-color: #FFC107;
+}
+
+.ad-rectangle{
+  width: 336px;
+  height: 280px;
+  background-color: #FFC107;
+}
 /* =========================================
    GAME PAGE
 ========================================= */
@@ -418,6 +429,25 @@ section, .carrusel, .main, .main-games {
   flex: 1;
   margin-left: 22px;
   padding: 40px clamp(16px, 6vw, 100px) 80px;
+}
+ /* Breadcrumb */
+
+.game-container{
+  width: auto;
+  display:flex;
+}
+.game-container .ad-long{
+  margin-left: auto;
+}
+ .breadcrumb{
+  display:flex;
+  padding-bottom: 16px;
+ }
+
+.game-placeholder{
+  max-width: 1080px;
+  max-height: 657px;
+  padding: 0px;
 }
 
 .game-screen {
@@ -435,7 +465,82 @@ section, .carrusel, .main, .main-games {
   display: block;         
 }
 
+.game-screen-info{
+  background-color: var(--secondary1);
+  width: 1080px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
 
+.game-info-container{
+  display: flex;
+  width: 1080px;
+  height: 580px;
+  margin-top: 20px;
+}
+
+.game-info{
+  background-color: var(--secondary1);
+  width: 724px;
+  height: 580px;
+}
+
+.game-info-ads{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.comments-section{
+  color: var(--terciary5);
+  width: 1080px;
+  height: 800px;  
+}
+
+.load-more{
+  align-self: center;
+}
+
+.comment{
+  background-color: #6A6161;
+  width: 1080px;
+  height: 100px;
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.comment-profile{
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  background-color: #1f1a1f;
+}
+
+.username {
+  white-space: nowrap;    
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  display: block;
+  width: 100%;
+  text-align: center; 
+}
+
+.comment-profile img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.comment-commentary{
+  margin-left: 10px;
+}
 
 /* =========================================
    PIE DE PÁGINA (FOOTER)

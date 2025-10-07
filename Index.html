@@ -54,7 +54,6 @@
                 <h1 class="modal-title">Registrarse</h1>
                 <button class="close-btn" onclick="closeModal()" aria-label="Cerrar">×</button>
             </div>
-
             <div class="modal-content">
                 <div class="social-buttons">
                     <button class="social-btn google-btn">
@@ -79,11 +78,9 @@
                     <span class="divider-text">o</span>
                     <div class="divider-line"></div>
                 </div>
-
-                <form onsubmit="handleSubmit(event)">
-                    <div class="form-group">
-                        </div>
-                    <div class="recaptcha-container">
+                
+                <form onsubmit="handleSubmit(event)"> </form>
+                     <div class="recaptcha-container">
                         <div class="recaptcha-box">
                             <input type="checkbox" class="recaptcha-checkbox" id="recaptcha" required>
                             <label for="recaptcha" class="recaptcha-text">No soy un robot</label>
@@ -91,14 +88,7 @@
                                 <path fill="#1877f2" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z"/>
                                 <path fill="#4285f4" d="M12 4.5c4.142 0 7.5 3.358 7.5 7.5s-3.358 7.5-7.5 7.5-7.5-3.358-7.5-7.5 3.358-7.5 7.5-7.5z"/>
                             </svg>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Registrarse</button>
-
-                    <div class="footer-links">
-                        ¿Ya tienes una cuenta? <a href="#" onclick="handleLogin(event)">Inicia sesión</a>
-                    </div>
+                        </div></div>
                 </form>
             </div>
         </div>
