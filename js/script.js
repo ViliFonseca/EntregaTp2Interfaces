@@ -14,7 +14,7 @@ const rightBtn = document.querySelector('.portada .arrow.right');
 const dots = document.querySelectorAll('.portada-dots div');
 const portadaImgs = [
   "img/hollow.jpg",
-  "img/Peg.jpg",
+  "img/Videogame/Videogame-preview.jpg",
   "img/GranTurismo.jpg"
 ];
 let portadaIndex = 0;

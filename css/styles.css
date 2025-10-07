@@ -281,8 +281,7 @@ aside.open .nav-btn span {
    PORTADA
 ========================================= */
 .portada {
-  max-width: 1300px;
-  margin: 0 auto 60px;
+  width: 100%;
   border-radius: 100px;
   overflow: hidden;
   position: relative;
@@ -491,9 +490,6 @@ section h2 {
 /* =========================================
    GAME PAGE
 ========================================= */
-.breadcrumb {
-
-}
 .main-games{
   flex: 1;
   padding: 20px;
