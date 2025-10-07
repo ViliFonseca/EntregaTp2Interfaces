@@ -277,22 +277,53 @@ aside.open .nav-btn span {
 
 .overlay.show { display: block; }
 
-/* =========================================
+/* ==========
    PORTADA
-========================================= */
+============*/
 .portada {
-  width: 100%;
-  border-radius: 100px;
+  max-width: 1300px;
+  margin: 0 auto 60px;
+  border-radius: 40px;
   overflow: hidden;
   position: relative;
-  aspect-ratio: 13 / 5;
+  aspect-ratio: 13/5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portada-slide {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  transition: transform 0.7s ease, opacity 0.7s ease;
+  opacity: 0;
   z-index: 0;
 }
 
-.portada img {
+.portada-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 40px;
+}
+
+.portada-slide.active {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 2;
+}
+
+.portada-slide.prev {
+  transform: translateX(-70%) scale(0.8);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.portada-slide.next {
+  transform: translateX(70%) scale(0.8);
+  opacity: 0.5;
+  z-index: 1;
 }
 
 .portada button.arrow {
@@ -300,14 +331,14 @@ aside.open .nav-btn span {
   top: 50%;
   transform: translateY(-50%);
   background: rgba(0,0,0,.35);
-  border: 1px solid var(--terciary1);
-  color: var(--terciary1);
+  border: 1px solid #fff;
+  color: #fff;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
+  z-index: 5;
 }
-
 .portada button.arrow.left { left: 30px; }
 .portada button.arrow.right { right: 30px; }
 
@@ -315,13 +346,14 @@ aside.open .nav-btn span {
   position: absolute;
   bottom: 80px;
   left: 80px;
-  background: var( --primary1);
-  border: 1px solid var(--secondary2);
+  background: #9E1C7E;
+  border: 1px solid #000;
   border-radius: 30px;
   padding: 10px 36px;
   color: #fff;
   font-weight: 700;
   cursor: pointer;
+  z-index: 5;
 }
 
 .portada-dots {
@@ -333,21 +365,18 @@ aside.open .nav-btn span {
   gap: 10px;
   z-index: 5;
 }
-
 .portada-dots div {
   width: 20px;
   height: 10px;
   border-radius: 5px;
-  background-color: var(--terciary2);
+  background-color: #aaa;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 .portada-dots div.active {
-  width: 40px; 
-  background-color: var( --primary1);
+  width: 40px;
+  background-color: #9E1C7E;
 }
-
 .spot {
   position: absolute;
   width: 100%;
@@ -358,8 +387,8 @@ aside.open .nav-btn span {
 
 .svg-wrapper {
   position: absolute;
-  bottom: 80px;
-  left: 80px;
+  top: 150px;
+  right: 350px;
   margin-top: 0;
   position: relative;
   width: 150px;
@@ -367,8 +396,10 @@ aside.open .nav-btn span {
   display: inline-block;
   border-radius: 3px;
   margin-left: 5px;
-  margin-right: 5px
+  margin-right: 5px;
+  z-index: 10;
 }
+
 
 #shape {
   stroke-width: 6px;
@@ -397,11 +428,13 @@ aside.open .nav-btn span {
   stroke-dashoffset: 0;
   stroke: #9e1c7e;
 }
-
+/* =========================================
+   SECCIONES DE JUEGOS
+========================================= */
 section {
   margin-bottom: 50px;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; 
 }
 section h2 {
   font-size: 20px;
@@ -410,8 +443,6 @@ section h2 {
   position: relative;
   z-index: 1;
 }
-
-/* ----- Carruseles ----- */
 .carrusel-container {
   position: relative;
   margin: 0 -10px; 
@@ -478,7 +509,6 @@ section h2 {
   background: rgba(126, 13, 98, 0.7); 
   transform: translateY(-50%) scale(1.1);
 }
-/* ----- Tarjetas de Juegos ----- */
 .game-card {
   scroll-snap-align: start;
   border: 5px solid var(--secondary1);
@@ -537,6 +567,9 @@ section h2 {
 /* =========================================
    GAME PAGE
 ========================================= */
+.breadcrumb {
+
+}
 .main-games{
   flex: 1;
   padding: 20px;
