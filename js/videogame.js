@@ -39,9 +39,26 @@ function fullscreen() {
             });
     }
 }
+function activarCorazonToggle(selector) {
+  const btn = document.querySelector(selector);
+
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('liked');
+
+    if (btn.classList.contains('liked')) {
+      btn.classList.add('animate');
+      setTimeout(() => btn.classList.remove('animate'), 400);
+    }
+  });
+}
+
+
 
 // Inicialización principal
 document.addEventListener("DOMContentLoaded", () => {
+    // Like Button
+    activarCorazonToggle('#likeBtn');
+
     // Switch screens
     const playButton = document.getElementById("playButton");
     const overlay = document.getElementById("gameOverlay");
