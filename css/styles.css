@@ -247,7 +247,7 @@ aside.open .nav-btn span {
 
 .nav-btn::before {
   content: "";
-  display: inline-block;
+  display: none;
   width: 24px;
   height: 24px;
   flex-shrink: 0;
