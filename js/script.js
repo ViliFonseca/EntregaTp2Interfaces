@@ -6,7 +6,6 @@
 const menuham = document.getElementById('menuham');
 const toggle = document.getElementById('menu-toggle');
 const overlay = document.getElementById('overlay');
-
 // Menú de Usuario
 const userBtn = document.getElementById("user");
 const userMenu = document.getElementById("user-menu");
@@ -18,51 +17,52 @@ const modalOverlay = document.getElementById("modalOverlay");
 const modalTitle = document.querySelector(".modal-title");
 const modalForm = modalOverlay.querySelector("form");
 const closeBtn = document.querySelector(".close-btn");
-
+const portada = document.querySelector('.portada'); 
 let sesionActiva = true;
 let modoRegistro = false;
 
 
-// ====================================================================
+// =============================================
 // 2. PORTADA - CARRUSEL ANIMADO
-// ====================================================================
-const slides = document.querySelectorAll('.portada-slide');
-const portadaDots = document.querySelectorAll('.portada-dots div');
-let current = 0;
+// =============================================
+if (portada) { // Si el contenedor .portada existe, ejecuta este código.
+    const slides = portada.querySelectorAll('.portada-slide');
+    const portadaDots = portada.querySelectorAll('.portada-dots div');
+    let current = 0;
 
-function updateSlides(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove('active', 'prev', 'next');
-    if (i === index) slide.classList.add('active');
-    if (i === (index - 1 + slides.length) % slides.length) slide.classList.add('prev');
-    if (i === (index + 1) % slides.length) slide.classList.add('next');
-  });
+    function updateSlides(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active', 'prev', 'next');
+            if (i === index) slide.classList.add('active');
+            if (i === (index - 1 + slides.length) % slides.length) slide.classList.add('prev');
+            if (i === (index + 1) % slides.length) slide.classList.add('next');
+        });
 
-  portadaDots.forEach((dot, i) => {
-    dot.classList.toggle('active', i === index);
-  });
-}
+        portadaDots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    }
 
-document.querySelector('.portada .arrow.left').addEventListener('click', () => {
-  current = (current - 1 + slides.length) % slides.length;
-  updateSlides(current);
-});
+    portada.querySelector('.arrow.left').addEventListener('click', () => {
+        current = (current - 1 + slides.length) % slides.length;
+        updateSlides(current);
+    });
 
-document.querySelector('.portada .arrow.right').addEventListener('click', () => {
-  current = (current + 1) % slides.length;
-  updateSlides(current);
-});
+    portada.querySelector('.arrow.right').addEventListener('click', () => {
+        current = (current + 1) % slides.length;
+        updateSlides(current);
+    });
 
-portadaDots.forEach((dot, i) => {
-  dot.addEventListener('click', () => {
-    current = i;
-    updateSlides(current);
-  });
-});
+    portadaDots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            current = i;
+            updateSlides(current);
+        });
+    });
 
-// Inicializar
-if (slides.length > 0) {
-  updateSlides(current);
+    if (slides.length > 0) {
+        updateSlides(current);
+    }
 }
 
 
@@ -70,6 +70,7 @@ if (slides.length > 0) {
 // 3. LÓGICA DEL MENÚ HAMBURGUESA
 // ====================================================================
 if (toggle && menuham && overlay) {
+  const inicioBtn = document.querySelector('.nav-btn.inicio');
   const cerrarMenuham = () => {
     menuham.classList.remove('open');
     overlay.classList.remove('show');
@@ -83,6 +84,11 @@ if (toggle && menuham && overlay) {
 
   // Cierra al hacer clic en el overlay
   overlay.addEventListener('click', cerrarMenuham);
+   if (inicioBtn) {
+    inicioBtn.addEventListener('click', () => {
+      window.location.href = 'Index.html'; // Cambia 'Index.html' por la URL de tu página de inicio
+      cerrarMenuham();
+    });
 
   // Cierra al redimensionar la ventana (para escritorio)
   window.addEventListener('resize', () => {
@@ -91,7 +97,7 @@ if (toggle && menuham && overlay) {
     }
   });
 }
-
+}
 
 // ====================================================================
 // 4. LÓGICA DEL MENÚ DE USUARIO

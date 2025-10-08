@@ -45,11 +45,11 @@
         <li>Cerrar Sesión</li>
       </ul>
     </div> 
-    <div class="modal-overlay" id="modalOverlay" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-overlay" id="modalOverlay">
         <div class="registration-modal">
             <div class="modal-header">
                 <h1 class="modal-title">Registrarse</h1>
-                <button class="close-btn" onclick="closeModal()" aria-label="Cerrar">×</button>
+                <button class="close-btn" aria-label="Cerrar">×</button>
             </div>
             <div class="modal-content">
                 <div class="social-buttons">
@@ -76,7 +76,7 @@
                     <div class="divider-line"></div>
                 </div>
                 
-                <form onsubmit="handleSubmit(event)"> </form>
+                <form> </form>
                      <div class="recaptcha-container">
                         <div class="recaptcha-box">
                             <input type="checkbox" class="recaptcha-checkbox" id="recaptcha" required>
@@ -102,7 +102,7 @@
         <!-- ====== MENÚ LATERAL ====== -->
     <aside id="menuham">
       <div class="menuham-inner">
-        <button class="nav-btn active inicio">
+        <button class="nav-btn active inicio" href="Index.html">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M6 19h3v-6h6v6h3v-9l-6-4.5L6 10zm-2 2V9l8-6l8 6v12h-7v-6h-2v6zm8-8.75"/></svg>
           <span>Inicio</span>
         </button>
