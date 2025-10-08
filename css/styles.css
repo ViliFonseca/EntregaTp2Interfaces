@@ -215,6 +215,7 @@ aside.open .menuham-line {
 
 .nav-btn {
   width: 100%;
+  height: 44px;
   display: flex;
   align-items: center;
   gap: 12px;
