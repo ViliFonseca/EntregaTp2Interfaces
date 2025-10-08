@@ -127,7 +127,7 @@ if (userBtn && userMenu) {
 cerrarSesionBtn.addEventListener("click", () => {
   sesionActiva = false;
   userSpan.style.display = "none";
-  userImg.src = "img/images.png"; 
+  userImg.src = "img/icons/icon_user.png"; 
   userMenu.classList.remove("open");
 });
 
